@@ -70,17 +70,14 @@ class LinearReg(object):
     def plot_data(self):
         plt.xlim(-1,1)
         plt.ylim(-1,1)
-        # plot the target function and final hypothesis
+        # plot the target function and g from linear regression
         xs = np.linspace(-1, 1, num=50)
         plt.plot(xs,(-xs*self.TV[0]-self.TV[2])/self.TV[1], c='r') # Ax + By + C = 0
         plt.plot(xs,(-self.w[0]-xs*self.w[1])/self.w[2], c='m') # A + Bx + Cy = 0
-
         # plot training data
         plt.scatter(self.training_data[:,1], self.training_data[:,2], s=60, c=self.training_data[:,3], cmap='brg')
-
         # plot sample data
         plt.scatter(self.sample_data[:,1], self.sample_data[:,2], s=10, c=self.sample_data[:,3], cmap='brg')
-
         plt.xlabel("x")
         plt.ylabel("y")
         plt.show()

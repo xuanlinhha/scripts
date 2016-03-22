@@ -56,7 +56,6 @@ class HeoffdingIneq:
             t3.append((abs(self.nu3 - 0.5) > ep).sum() / self.experiments)
             # inequality bound
             b.append(2 * np.exp(-2 * (ep ** 2) * self.flips))
-
         plt.plot(eps, t1, marker='.', color='g', label='Firt coin')
         plt.plot(eps, t2, marker='.', color='y', label='Random coin')
         plt.plot(eps, t3, marker='.', color='b', label='Minimum Fraction coin')

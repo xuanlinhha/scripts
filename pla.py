@@ -70,13 +70,10 @@ class PLA:
         xs = np.linspace(-1, 1, num=50)
         plt.plot(xs,(-xs*self.TV[0]-self.TV[2])/self.TV[1], c='r') # Ax + By + C = 0
         plt.plot(xs,(-self.PV[0]-xs*self.PV[1])/self.PV[2], c='m') # A + Bx + Cy = 0
-
         # plot training data
         plt.scatter(self.training_data[:,1], self.training_data[:,2], s=60, c=self.training_data[:,3], cmap='brg')
-
         # plot sample data
         plt.scatter(self.sample_data[:,1], self.sample_data[:,2], s=10, c=self.sample_data[:,3], cmap='brg')
-
         plt.xlabel("x")
         plt.ylabel("y")
         plt.show()
